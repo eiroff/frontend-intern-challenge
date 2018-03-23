@@ -3,80 +3,94 @@
 <head>
 	<meta charset="UTF-8"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700" rel="stylesheet"> 
 	<title>Encurtador de links</title>
 </head>
 <body>
 	<!-- Header - Chaordic logo -->
 	<header>
 		<figure>
-			<img src="assets/img/logo-chaordic.png" alt="Chaordic logo">
+			<a href="http://chaordic.com.br/">
+				<img src="assets/img/logo-chaordic.png" alt="Chaordic logo">
+			</a>
 		</figure>
 	</header>
 	<!-- End header - Chaordic logo -->
 
-	<!-- Main - URLs content -->
-	<article>
+	<!-- Main area - URLs content -->
+	<main>
 		<!-- URL shortener -->
-		<section>
-			<h1>Encurte seus links.</h1>
-			<p>Links são longos. Encurte os links que você deseja compartilhar, e acompanhe enquanto viajam através da internet.</p>	
-			<form action="/" method="post">
-				<input type="text" placeholder="Cole o seu link aqui">
-				<input type="button" value="Encurtar">
-			</form>
+		<section class="shortener">
+			<article>
+				<h1>Encurte seus links.</h1>
+				<p>Links são longos. Encurte os links que você deseja compartilhar, e acompanhe enquanto viajam através da internet.</p>	
+				<form action="/" method="post">
+					<input type="text" placeholder="Cole o seu link aqui">
+					<input type="button" value="Encurtar">
+				</form>
+			</article>
 		</section>
 		<!-- End URL shortener -->
 
-		<!-- Top 5 -->
-		<section>
-			<h2>Top 5</h2>
-			<table>
-				<tr>
-					<td>http://chr.dc/xyzxyz</td>
-					<td>7.919</td>
-				</tr>
-				<tr>
-					<td>http://chr.dc/abcabc</td>
-					<td>6.899</td>
-				</tr>
-				<tr>
-					<td>http://chr.dc/derder</td>
-					<td>2.111</td>
-				</tr>
-				<tr>
-					<td>http://chr.dc/fghfgh</td>
-					<td>617</td>
-				</tr>
-				<tr>
-					<td>http://chr.dc/yuiyui</td>
-					<td>43</td>
-				</tr>
-			</table>
+		<!-- Top 5 URLs-->
+		<section class="top-five">
+			<article>
+				<h2>Top 5</h2>
+				<table>
+					<tr>
+						<td><a href="#">http://chr.dc/xyzxyz</a></td>
+						<td>7.919</td>
+					</tr>
+					<tr>
+						<td><a href="#">http://chr.dc/abcabc</a></td>
+						<td>6.899</td>
+					</tr>
+					<tr>
+						<td><a href="#">http://chr.dc/derder</a></td>
+						<td>2.111</td>
+					</tr>
+					<tr>
+						<td><a href="#">http://chr.dc/fghfgh</a></td>
+						<td>617</td>
+					</tr>
+					<tr>
+						<td><a href="#">http://chr.dc/yuiyui</a></td>
+						<td>43</td>
+					</tr>
+				</table>	
+			</article>
 		</section>
-		<!-- End top 5 -->
+		<!-- End top 5 URLs-->
 
-		<!-- Hits -->
-		<section>
-			<h2>Hits</h2>
-			<p>35.713.571</p>
-			<p>Cliques em links</p>
+		<!-- Hits to URLs-->
+		<section class="hits">
+			<article>
+				<h2>Hits</h2>
+				<p class="total-hits">35.713.571</p>
+				<p class="legend">Cliques em links</p>
+			</article>
 		</section>
-		<!-- End hits -->
-
-	</article>
-	<!-- End main - URLs content -->
+		<!-- End hits to URLs-->
+	</main>
+	<!-- End main area - URLs content -->
 
 	<!-- Footer -->
 	<footer>
-		<a href="http://chaordic.com.br/">chr.dc</a>
-		<nav>
+		<a href="http://chaordic.com.br/" class="chaordic-link">chr.dc</a>
+		<aside>
 			<ul>
-				<li>
-					<a href="#">Twitter</a>
-					<a href="#">Facebook</a>
+				<li class="fb-chaordic">
+					<a href="https://twitter.com/chaordic">
+						<img src="assets/img/icon-twitter.png" alt="Twitter Chaordic">
+					</a>
+				</li>
+				<li class="tw-chaordic">
+					<a href="https://www.facebook.com/chaordic.com.br/">
+						<img src="assets/img/icon-facebook.png" alt="Facebook Chaordic">
+					</a>
 				</li>
 			</ul>
-		</nav>
+		</aside>
 	</footer>
 	<!-- End footer -->
 </html>
