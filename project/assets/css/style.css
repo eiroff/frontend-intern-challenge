@@ -48,6 +48,7 @@ header {
 
 .shortener {
   background: url(../img/background-home.jpg) no-repeat center;
+  background-size: cover;
   height: 480px;
   display: flex;
   align-items: center; }
@@ -73,13 +74,12 @@ header {
       border: none;
       border-bottom: 2px #ff6e14 solid;
       margin-right: 10px; }
-      .shortener form input[type=text]::placeholder {
+      .shortener form input[type=text]::placeholder, .shortener form input[type=text]:focus {
         color: #ff6e14;
         font-size: 16px;
         font-family: "Roboto", sans-serif;
-        font-weight: 700; }
-      .shortener form input[type=text]:focus {
-        outline: none; }
+        outline: none;
+        padding: 0; }
     .shortener form input[type=button] {
       flex: 1;
       background-color: #ff6e14;
@@ -94,6 +94,8 @@ header {
       .shortener form input[type=button]:hover {
         cursor: pointer;
         background-color: #e05600; }
+      .shortener form input[type=button]:focus {
+        outline: none; }
 
 .top-five {
   text-align: center; }
@@ -159,3 +161,27 @@ footer {
     float: left; }
   footer .fb-chaordic {
     margin-right: 20px; }
+
+@media screen and (max-width: 768px) {
+  footer {
+    width: 80%; } }
+
+@media screen and (max-width: 520px) {
+  .shortener h1 {
+    font-size: 26px; }
+  .shortener p {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 10px; }
+  .shortener form {
+    flex-direction: column; }
+    .shortener form input[type=button], .shortener form input[type=text] {
+      width: 80%;
+      margin: 0 auto; }
+    .shortener form input[type=button] {
+      margin-top: 20px; } }
+
+@media screen and (max-width: 440px) {
+  .top-five table {
+    width: 80%;
+    font-size: 14px; } }

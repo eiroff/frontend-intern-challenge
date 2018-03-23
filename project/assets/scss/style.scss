@@ -25,6 +25,7 @@ header {
 //URL shortener
 .shortener {
 	background: url(../img/background-home.jpg) no-repeat center;
+	background-size: cover;
 	height: 480px;
 	display: flex;
 	align-items: center;
@@ -53,15 +54,14 @@ header {
 			border: none;
 			border-bottom: 2px $highlight-color solid;
 			margin-right: 10px;
-			&::placeholder {
+			&::placeholder, &:focus {
 				color: $highlight-color;
 				font-size: $default-font-size;
 				font-family: $text-font;
-				font-weight: 700;
-			}
-			&:focus {
 				outline: none;
+				padding: 0;
 			}
+
 		}
 		input[type=button] {
 			flex: 1;
@@ -77,6 +77,9 @@ header {
 			&:hover {
 				cursor: pointer;
 				background-color: darken($highlight-color, 10%);
+			}
+			&:focus {
+				outline: none;
 			}
 		}
 	}
@@ -168,5 +171,42 @@ footer {
 	}
 	.fb-chaordic {
 		margin-right: 20px;
+	}
+}
+
+//Medias queries
+@media screen and (max-width: 768px) {
+	footer {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.shortener {
+		h1 {
+			font-size: 26px;
+		}
+		p {
+			font-size: 14px;
+			line-height: 17px;
+			margin: 0 10px;
+		}
+		form {
+			flex-direction: column;
+			input[type=button], input[type=text] {
+				width: 80%;
+				margin: 0 auto;
+			}
+			input[type=button] {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 440px) {
+	.top-five table {
+		width: 80%;
+		font-size: 14px;
 	}
 }
