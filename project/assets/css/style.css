@@ -1,3 +1,4 @@
+/* Import CSS reset */
 /* 
 	Adapted CSS reset
 	http://meyerweb.com/eric/tools/css/reset/ 
@@ -32,6 +33,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* General rules */
 body {
   background-color: #ffffff;
   font-family: "Roboto", sans-serif; }
@@ -42,10 +44,12 @@ h2, .total-hits {
   color: #aa1423;
   text-transform: uppercase; }
 
+/* Header */
 header {
   margin: 16px 0;
   text-align: center; }
 
+/* URL shortener */
 .shortener {
   background: url(../img/background-home.jpg) no-repeat center;
   background-size: cover;
@@ -67,42 +71,60 @@ header {
     text-align: center; }
   .shortener form {
     margin-top: 50px;
-    display: flex; }
+    display: flex;
+    /* It appears when the URL is shortened*/ }
     .shortener form input[type=text] {
       flex: 2;
-      background-color: transparent;
+      background: transparent;
       border: none;
       border-bottom: 2px #ff6e14 solid;
-      margin-right: 10px; }
+      margin-right: 10px;
+      color: #ff6e14;
+      font-size: 16px;
+      font-family: "Roboto", sans-serif; }
       .shortener form input[type=text]::placeholder, .shortener form input[type=text]:focus {
         color: #ff6e14;
         font-size: 16px;
         font-family: "Roboto", sans-serif;
-        outline: none;
-        padding: 0; }
-    .shortener form input[type=button] {
+        outline: none; }
+      .shortener form input[type=text].short-url {
+        color: #ffffff;
+        font-weight: 700; }
+    .shortener form input[type=reset] {
+      opacity: 0; }
+      .shortener form input[type=reset].active {
+        opacity: 1;
+        transition: opacity 1s linear;
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+        position: relative;
+        top: -13px;
+        right: 27px; }
+    .shortener form .main-button {
       flex: 1;
       background-color: #ff6e14;
       color: #ffffff;
       border: 0;
-      height: 38px;
       text-transform: uppercase;
       font-size: 16px;
       font-weight: 700;
       font-family: "Roboto", sans-serif;
-      padding: 0 10px; }
-      .shortener form input[type=button]:hover {
+      padding: 10px; }
+      .shortener form .main-button:hover {
         cursor: pointer;
         background-color: #e05600; }
-      .shortener form input[type=button]:focus {
+      .shortener form .main-button:focus {
         outline: none; }
 
+/* Top 5 URLs */
 .top-five {
   text-align: center; }
   .top-five h2 {
     margin: 50px 0 35px; }
   .top-five table {
-    width: 370px;
+    max-width: 370px;
+    width: 80%;
     margin: 0 auto 60px; }
     .top-five table tr:not(:first-child) {
       border-top: 1px solid #eeeeee; }
@@ -120,6 +142,7 @@ header {
         text-align: right;
         color: #777777; }
 
+/* Hits to URLs */
 .hits {
   background-color: #eeeeee;
   text-align: center;
@@ -147,10 +170,12 @@ header {
     margin-top: 10px;
     color: #777777; }
 
+/* Footer */
 footer {
   display: flex;
   justify-content: space-between;
   max-width: 600px;
+  width: 80%;
   margin: 25px auto; }
   footer a {
     text-decoration: none; }
@@ -162,10 +187,7 @@ footer {
   footer .fb-chaordic {
     margin-right: 20px; }
 
-@media screen and (max-width: 768px) {
-  footer {
-    width: 80%; } }
-
+/* Medias queries */
 @media screen and (max-width: 520px) {
   .shortener h1 {
     font-size: 26px; }
@@ -183,5 +205,5 @@ footer {
 
 @media screen and (max-width: 440px) {
   .top-five table {
-    width: 80%;
-    font-size: 14px; } }
+    font-size: 14px;
+    margin-bottom: 30px; } }
