@@ -14,14 +14,14 @@
 
 ## Estrutura do projeto
 
-├── project
-├   ├─── index.html
-├   ├─── gulpfile.js
-├   ├─── package.json
-├   ├─── assets
-├   ├────├─── css
-├   ├────├─── img
-├   ├────├─── js
+├── project <br />
+├   ├─── index.html <br />
+├   ├─── gulpfile.js <br />
+├   ├─── package.json <br />
+├   ├─── assets <br />
+├   ├────├─── css <br />
+├   ├────├─── img <br />
+├   ├────├─── js <br />
 ├   ├────├─── scss
 
 ### Tecnologias utilizadas
